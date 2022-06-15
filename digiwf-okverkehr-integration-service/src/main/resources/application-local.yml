@@ -1,0 +1,56 @@
+io:
+  muenchendigital:
+    digiwf:
+      okverkehr:
+        username: <username>
+        password: <password>
+        url: <url>
+
+spring:
+  cloud:
+    function:
+      definition: functionRouter;sendMessage;sendCorrelateMessage;
+    stream:
+      bindings:
+        functionRouter-in-0:
+          destination: <topic>
+          group: <group>
+        sendCorrelateMessage-out-0:
+          destination: <topic>
+        sendMessage-out-0:
+          destination: <topic>
+      function:
+        routing:
+          enabled: true
+      kafka:
+        binder:
+          brokers: <broker>
+          configuration:
+            security:
+              protocol: SSL
+          consumerProperties:
+            auto:
+              offset:
+                reset: latest
+            key:
+              deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+            value:
+              deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+          producerProperties:
+            key:
+              serializer: org.springframework.kafka.support.serializer.JsonSerializer
+            value:
+              serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  kafka:
+    consumer:
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+    ssl:
+      key-store-location: <key-store>
+      trust-store-location: <trust-store>
+      key-store-password: <password>
+      trust-store-password: <password>
+      key-password: <password>
