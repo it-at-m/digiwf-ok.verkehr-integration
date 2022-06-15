@@ -17,18 +17,8 @@ public class OkVerkehrHalterService {
 
     private final OkVerkehrHalterRepository okVerkehrHalterRepository;
 
-    public HalterPersonAntwort getHalter(final String kennzeichen, final String suchzeitpunkt, final String benutzer, final String verfahren, final String anfrageid) throws OkVerkehrIntegrationClientErrorException, OkVerkehrIntegrationServerErrorException, OkVerkehrIntegrationException {
-        final HalterPersonAnfrage halterPersonAnfrage = new HalterPersonAnfrage();
-        halterPersonAnfrage.setKennzeichen(kennzeichen);
-        halterPersonAnfrage.setSuchzeitpunkt(suchzeitpunkt);
-        halterPersonAnfrage.setBenutzer(benutzer);
-        halterPersonAnfrage.setVerfahren(verfahren);
-        halterPersonAnfrage.setAnfrageid(anfrageid);
-
-        return getHalter(halterPersonAnfrage);
-    }
-
     public HalterPersonAntwort getHalter(final HalterPersonAnfrage request) throws OkVerkehrIntegrationClientErrorException, OkVerkehrIntegrationServerErrorException, OkVerkehrIntegrationException {
         return okVerkehrHalterRepository.getHalter(request);
     }
+    
 }
