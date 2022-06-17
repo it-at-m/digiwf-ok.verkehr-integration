@@ -25,7 +25,7 @@ implementation group: 'io.muenchendigital.digiwf', name: 'digiwf-okverkehr-integ
 4. Configure your application
 
 ```yaml
-io.muenchendigital.digiwf.okewo:
+io.muenchendigital.digiwf.okverkehr:
   url: <URL>
   username: <USERNAME>
   password: <PASSWORD>
