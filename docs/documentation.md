@@ -54,3 +54,24 @@ For each request type, the payload has to be defined in the element templates re
 The response is also an JSON object.
 A crucial and mandatory JSON object attribute for a request is `eventType`.
 This attribute is necessary for correct deserialization of the requests JSON payload within the integration service.
+
+##### getHalter
+
+Searches for Halter is based on search parameters.
+
+The following JSON object shows the example payload set at the element templates request field.
+The search parameters within JSON object allocated to JSON key `searchPerson` are optional,
+if parameters are not needed, they can be omitted.
+
+```yaml
+{
+  "eventType": "getHalter",
+  "halterPersonAnfrage": {
+    "anfrageid": "consequat Ut reprehenderit voluptate Lorem",
+    "benutzer": "proident Duis",
+    "kennzeichen": "id fugiat proident",
+    "suchzeitpunkt": "1955-12-13",
+    "verfahren": "proident ex sit"
+  }
+}
+```
