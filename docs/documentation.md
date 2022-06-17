@@ -42,3 +42,15 @@ The file `application-local.yml` provides the event bus and OK.VERKEHR relevant 
 The event bus configuration is implemented
 according [DigiWF Spring Cloudstream Utils](https://github.com/it-at-m/digiwf-spring-cloudstream-utils#getting-started).
 
+#### Service API usage
+
+The OK.VERKEHR requests have to be made via the element template defined in `okVerkehrIntegration.json`.
+The service and the template are providing the following types of requests.
+The request type can be defined via the element template dropdown in field `Event Type`.
+
+* `getHalter`
+
+For each request type, the payload has to be defined in the element templates request field as a JSON object.
+The response is also an JSON object.
+A crucial and mandatory JSON object attribute for a request is `eventType`.
+This attribute is necessary for correct deserialization of the requests JSON payload within the integration service.
