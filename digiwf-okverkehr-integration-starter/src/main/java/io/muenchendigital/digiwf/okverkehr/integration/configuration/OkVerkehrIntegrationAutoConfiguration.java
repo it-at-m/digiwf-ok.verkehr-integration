@@ -1,6 +1,5 @@
 package io.muenchendigital.digiwf.okverkehr.integration.configuration;
 
-
 import io.muenchendigital.digiwf.okverkehr.integration.gen.ApiClient;
 import io.muenchendigital.digiwf.okverkehr.integration.gen.api.BusinessActionskfzhalterpersonenApi;
 import io.muenchendigital.digiwf.okverkehr.integration.properties.OkVerkehrIntegrationProperties;
