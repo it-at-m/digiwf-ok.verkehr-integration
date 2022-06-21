@@ -63,15 +63,18 @@ The following JSON object shows the example payload set at the element templates
 The search parameters within JSON object allocated to JSON key `searchPerson` are optional,
 if parameters are not needed, they can be omitted.
 
+Mandatory attributes are `kennzeichen` and `suchzeitpunkt`.
+The attribute `suchzeitpunkt` has to be a date in ISO format.
+Optional but recommended attributes are `benutzer` and `verfahren`.
+
 ```json
 {
   "eventType": "getHalter",
   "halterPersonAnfrage": {
-    "anfrageid": "consequat Ut reprehenderit voluptate Lorem",
-    "benutzer": "proident Duis",
-    "kennzeichen": "id fugiat proident",
+    "benutzer": "testuser",
+    "kennzeichen": "M AA1000",
     "suchzeitpunkt": "1955-12-13",
-    "verfahren": "proident ex sit"
+    "verfahren": "VES"
   }
 }
 ```
@@ -320,5 +323,16 @@ The response is as follows.
     "zb2Nummer": "eiusmod ad aliquip",
     "zulassungAufHalterDatum": "1968-12-27"
   }
+}
+```
+
+#### Error handling
+
+If client-side errors, server-side errors or errors that cannot be assigned to either the client or the server occur
+during the rest request within the service, an error response is returned to the caller via the event bus.
+
+```json
+{
+  "message": "THE GENERIC ERROR MESSAGE"
 }
 ```
