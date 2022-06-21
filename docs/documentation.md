@@ -66,6 +66,7 @@ if parameters are not needed, they can be omitted.
 Mandatory attributes are `kennzeichen` and `suchzeitpunkt`.
 The attribute `suchzeitpunkt` has to be a date in ISO format.
 Optional but recommended attributes are `benutzer` and `verfahren`.
+These two recommended attributes are for logging purposes.
 
 ```json
 {
