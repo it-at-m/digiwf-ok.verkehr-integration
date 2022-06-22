@@ -57,7 +57,7 @@ This attribute is necessary for correct deserialization of the requests JSON pay
 
 ##### getHalter
 
-Searches for Halter is based on search parameters.
+Searches for Fahrzeughalter (vehicle owner) is based on search parameters.
 
 The following JSON object shows the example payload set at the element templates request field.
 The search parameters within JSON object allocated to JSON key `searchPerson` are optional,
