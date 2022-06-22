@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.muenchendigital.digiwf</groupId>
     <artifactId>digiwf-okverkehr-integration-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>digiwf-okverkehr-integration-parent</name>
     <packaging>pom</packaging>
     <description>OK.Verkehr integration used by DigiWF</description>
