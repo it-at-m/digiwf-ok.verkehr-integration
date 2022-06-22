@@ -25,11 +25,11 @@ public class OkVerkehrHalterRepository {
      * Gets a {@link HalterPersonAntwort} by {@link HalterPersonAnfrage}.
      *
      * @param request the {@link HalterPersonAnfrage}
-     * @return the {@link HalterPersonAntwort} identified by the request param
+     * @return the {@link HalterPersonAntwort} identified by the request body.
      */
     public HalterPersonAntwort getHalter(final HalterPersonAnfrage request) throws OkVerkehrIntegrationClientErrorException, OkVerkehrIntegrationServerErrorException, OkVerkehrIntegrationException {
         try {
-            return businessActionskfzhalterpersonenApi.route1(request);
+            return this.businessActionskfzhalterpersonenApi.route1(request);
         } catch (final HttpClientErrorException exception) {
             final String message = String.format("The request to get a halter failed with %s.", exception.getStatusCode());
             log.error(exception.getMessage());

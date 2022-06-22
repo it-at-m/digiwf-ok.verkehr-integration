@@ -1,6 +1,5 @@
 package io.muenchendigital.digiwf.okverkehr.integration.configuration;
 
-
 import io.muenchendigital.digiwf.okverkehr.integration.gen.ApiClient;
 import io.muenchendigital.digiwf.okverkehr.integration.gen.api.BusinessActionskfzhalterpersonenApi;
 import io.muenchendigital.digiwf.okverkehr.integration.properties.OkVerkehrIntegrationProperties;
@@ -23,7 +22,7 @@ import org.springframework.web.client.RestTemplate;
                         classes = {
                                 /**
                                  * Exclude to avoid multiple instantiation of beans with same name.
-                                 * This class is instantiated in {@link OkEwoIntegrationAutoConfiguration}
+                                 * This class is instantiated in {@link OkVerkehrIntegrationAutoConfiguration}
                                  * to give the bean another name.
                                  */
                                 ApiClient.class,
